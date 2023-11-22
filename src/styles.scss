@@ -1,1 +1,23 @@
 /* You can add global styles to this file, and also import other style files */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+:root {
+  --base-color: #ffffff;
+  --base-black-color: #000000;
+  --color-link: #125699;
+  --background-color-main: #ffffff;
+  --background-color-header: #ffffff;
+  --background-color-navbar: #8bedca;
+  --color-header: #000000;
+  --color-navbar: #000000;
+}
+*{margin: 0; padding: 0; box-sizing: border-box;}
+body {font-family: 'Poppins', sans-serif;}
+.buttons { display: flex; align-items: center; }
+.buttons > button { line-height: 20px; padding: 0.5rem 1rem; text-align: center; text-transform: uppercase; letter-spacing: 2px;}
+.buttons > button:hover {
+  cursor: pointer;
+}
+.buttons>.button-disabled {
+  opacity: 0.5;
+  cursor: none;
+}

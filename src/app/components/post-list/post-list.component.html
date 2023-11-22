@@ -1,0 +1,26 @@
+<h2 class="">Posts List</h2>
+
+<table class="">
+    <thead>
+        <tr>
+            <th>Name</th>
+            <th>Position</th>
+            <th>Level</th>
+            <th>Action</th>
+        </tr>
+    </thead>
+
+    <tbody>
+        <tr *ngFor="let post of posts">
+            <td>{{post.title}}</td>
+            <td>{{post.content}}</td>
+            <td>{{post.author}}</td>
+            <td>
+                <button class="" [routerLink]="['edit/', post._id]">Edit</button>
+                <button class="" (click)="deletePost(post._id || '')">Delete</button>
+            </td>
+        </tr>
+    </tbody>
+</table>
+
+<button class="" [routerLink]="['new']">Add a New Post</button>

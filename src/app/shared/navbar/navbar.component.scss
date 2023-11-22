@@ -1,0 +1,32 @@
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 60px;
+  background-color: var(--background-color-navbar);
+  border-radius: 2rem;
+  margin: 1rem 0;
+  .list {
+    list-style: none;
+    li {
+      display: inline-block;
+      margin: 0 1rem;
+      padding: 1rem;
+      &:hover {
+        background-color: #ffffff;
+        opacity: 0.6;
+        border-radius: 1.5rem;
+        cursor: pointer;
+      }
+      a {
+        text-decoration: none;
+        text-transform: capitalize;
+        color: var(--color-navbar);
+        &.activeTab {
+          text-decoration: underline;
+          font-weight: 600;
+        }
+      }
+    }
+  }
+}
