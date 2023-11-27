@@ -7,4 +7,5 @@ export interface Post {
   level?: "entry" | "expert";
   _id?: string;
   date?: Date;
+  summary?: string;
 }

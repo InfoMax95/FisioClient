@@ -16,7 +16,7 @@ import { PostCardComponent } from '../../shared/post-card/post-card.component';
 export class PostListComponent {
   posts$: Observable<Post[]> = new Observable();
 
-  public items = [1, 2, 3, 4, 5, 6]
+  public items = [1, 2, 3, 4, 5, 6];
 
   constructor(private postsService: PostsService) { }
 
@@ -26,7 +26,8 @@ export class PostListComponent {
 
   deletePost(id: string): void {
     this.postsService.deletePost(id).subscribe({
-      next: () => this.fetchPosts()
+      next: () => this.fetchPosts(),
+      error: err => console.log(err)
     });
   }
 
