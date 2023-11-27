@@ -1,6 +1,10 @@
-<h2 class="">Posts List</h2>
+<h2 style="text-align: center">Posts List</h2>
 
-<table class="">
+<div class="container-posts">
+  <app-post-card *ngFor="let item of items" id="post-card"></app-post-card>
+</div>
+
+<!-- <table class="">
     <thead>
         <tr>
             <th>Name</th>
@@ -11,7 +15,7 @@
     </thead>
 
     <tbody>
-        <tr *ngFor="let post of posts">
+        <tr *ngFor="let post of posts$ | async">
             <td>{{post.title}}</td>
             <td>{{post.content}}</td>
             <td>{{post.author}}</td>
@@ -23,4 +27,4 @@
     </tbody>
 </table>
 
-<button class="" [routerLink]="['new']">Add a New Post</button>
+<button class="" [routerLink]="['new']">Add a New Post</button> -->

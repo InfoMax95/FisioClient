@@ -4,34 +4,33 @@ import { Observable } from 'rxjs';
 import { Post } from '../../models/post';
 import { PostsService } from '../../services/posts.service';
 import { RouterLink } from '@angular/router';
+import { PostCardComponent } from '../../shared/post-card/post-card.component';
 
 @Component({
   selector: 'app-post-list',
   standalone: true,
-  imports: [CommonModule, RouterLink],
+  imports: [CommonModule, RouterLink, PostCardComponent],
   templateUrl: './post-list.component.html',
   styleUrl: './post-list.component.scss'
 })
 export class PostListComponent {
-  posts: Post[] = [{},{},{}]
-  // posts$: Observable<Post[]> = new Observable();
+  posts$: Observable<Post[]> = new Observable();
 
-  // constructor(private postsService: PostsService) { }
+  public items = [1, 2, 3, 4, 5, 6]
 
-  // ngOnInit(): void {
-  //   this.fetchPosts();
-  // }
+  constructor(private postsService: PostsService) { }
 
-  // deletePost(id: string): void {
-  //   this.postsService.deletePost(id).subscribe({
-  //     next: () => this.fetchPosts()
-  //   });
-  // }
-  deletePost(id: string) {
-
+  ngOnInit(): void {
+    this.fetchPosts();
   }
 
-  // private fetchPosts(): void {
-  //   this.posts$ = this.postsService.getPosts();
-  // }
+  deletePost(id: string): void {
+    this.postsService.deletePost(id).subscribe({
+      next: () => this.fetchPosts()
+    });
+  }
+
+  private fetchPosts(): void {
+    this.posts$ = this.postsService.getPosts();
+  }
 }

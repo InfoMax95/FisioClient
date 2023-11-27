@@ -1,0 +1,9 @@
+.container-posts {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  #post-card {
+    width: calc(100% / 3 - 1rem);
+  }
+}
