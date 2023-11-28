@@ -6,6 +6,6 @@ export interface Post {
   author?: string;
   level?: "entry" | "expert";
   _id?: string;
-  date?: Date;
+  creation_date?: string;
   summary?: string;
 }

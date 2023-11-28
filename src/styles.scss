@@ -6,9 +6,11 @@
   --color-link: #125699;
   --background-color-main: #ffffff;
   --background-color-header: #ffffff;
-  --background-color-navbar: #8bedca;
+  --background-color-navbar: #000000;
+  --background-color-li-navbar-hover: #ffffff;
+  --color-a-navbar-hover: #000000;
   --color-header: #000000;
-  --color-navbar: #000000;
+  --color-navbar: #ffffff;
 }
 *{margin: 0; padding: 0; box-sizing: border-box;}
 body {font-family: 'Poppins', sans-serif;}
